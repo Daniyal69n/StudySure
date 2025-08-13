@@ -1,0 +1,413 @@
+{
+  "united-kingdom": {
+    "slug": "united-kingdom",
+    "countryName": "UK",
+    "bannerImage": "uk",
+    "whyStudyReasons": [
+      "**World's top ranking universities** such as Oxford, Cambridge, Kings College and Imperial College London are located in UK",
+      "**High quality education** monitored by the Office for Students (OfS) and the Quality Assurance Agency for Higher Education (QAA)",
+      "UK universities have **state-of-the-art facilities** for international level research"
+    ],
+    "topUniversities": [
+      {
+        "name": "University of Oxford",
+        "rank": "#1"
+      },
+      {
+        "name": "University of Cambridge",
+        "rank": "#2"
+      },
+      {
+        "name": "Imperial College London",
+        "rank": "#3"
+      },
+      {
+        "name": "London School of Economics",
+        "rank": "#4"
+      },
+      {
+        "name": "University College London",
+        "rank": "#5"
+      },
+      {
+        "name": "University of Edinburgh",
+        "rank": "#6"
+      },
+      {
+        "name": "University of Manchester",
+        "rank": "#7"
+      },
+      {
+        "name": "King's College London",
+        "rank": "#8"
+      },
+      {
+        "name": "University of Bristol",
+        "rank": "#9"
+      },
+      {
+        "name": "University of Glasgow",
+        "rank": "#10"
+      }
+    ],
+    "visaProcess": [
+      {
+        "step": "Get Admission and CAS Letter",
+        "description": "Receive Confirmation of Acceptance for Studies (CAS) from selected UK university"
+      },
+      {
+        "step": "Make Required Documents Ready",
+        "description": "Ready your passport, academic certificates, bank statement, TB / health certificates, and English Language Test (IELTS / PTE) result"
+      },
+      {
+        "step": "Apply Online for Visa using UKVI Website",
+        "description": "Complete and process visa application on official UK website"
+      },
+      {
+        "step": "Pay Visa Fee and Immigration Health Surcharge (IHS)",
+        "description": "a. IHS - 776 £ per year\nb. Visa Fee - 490 £"
+      },
+      {
+        "step": "Book & Attend Biometric Appointment",
+        "description": "Attend a biometric session at nearest visa center when called"
+      },
+      {
+        "step": "Processing Time",
+        "description": "Generally, visa processing takes approx 3–4 weeks"
+      }
+    ],
+    "costData": {
+      "tuitionFees": [
+        {
+          "level": "Bachelor's Degree",
+          "range": "10,000 - 20,000 GBP / year"
+        },
+        {
+          "level": "Master's Degree",
+          "range": "10,000 - 20,000 GBP / year"
+        },
+        {
+          "level": "Doctoral Degree",
+          "range": "15,000 - 25,000 GBP / year"
+        }
+      ]
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in UK",
+      "description": "**PSW Visa in UK** is available through Graduate Route. PSW visa is granted by UK for a fixed **duration of 2-3** years after completing degree studies.",
+      "benefits": [
+        "**PSW visa offers** graduates a more straight method to stay in the UK legally after graduation",
+        "It also **allows firms to hire new graduates avoiding financial and compliance commitments** associated with the sponsorship procedures"
+      ]
+    },
+    "workRights": {
+      "termTime": "20 hrs/week",
+      "holidays": "Full-time"
+    }
+  },
+  "germany": {
+    "slug": "germany",
+    "countryName": "Germany",
+    "whyStudyReasons": [
+      "custtttt"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Germany",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "italy": {
+    "slug": "italy",
+    "countryName": "Italy",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Italy",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "belarus": {
+    "slug": "belarus",
+    "countryName": "Belarus",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Belarus",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "france": {
+    "slug": "france",
+    "countryName": "France",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in France",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "georgia": {
+    "slug": "georgia",
+    "countryName": "Georgia",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Georgia",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "hungary": {
+    "slug": "hungary",
+    "countryName": "Hungary",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Hungary",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "denmark": {
+    "slug": "denmark",
+    "countryName": "Denmark",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Denmark",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "cyprus": {
+    "slug": "cyprus",
+    "countryName": "Cyprus",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Cyprus",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "united-states": {
+    "slug": "usa",
+    "countryName": "USA",
+    "whyStudyReasons": [
+      "i was changing usa data",
+      "this just test harvard",
+      "nothing mit"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in USA",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "canada": {
+    "slug": "canada",
+    "countryName": "Canada",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [
+      {
+        "name": "CUST",
+        "rank": "#1"
+      },
+      {
+        "name": "",
+        "rank": "#2"
+      }
+    ],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Canada",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "australia": {
+    "slug": "australia",
+    "countryName": "Australia",
+    "whyStudyReasons": [
+      "cust"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Australia",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "turkey": {
+    "slug": "turkey",
+    "countryName": "Turkey",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Turkey",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "china": {
+    "slug": "china",
+    "countryName": "China",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in China",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  },
+  "dubai": {
+    "slug": "dubai",
+    "countryName": "Dubai, UAE",
+    "whyStudyReasons": [
+      "Content to be added"
+    ],
+    "topUniversities": [],
+    "visaProcess": [],
+    "costData": {
+      "tuitionFees": []
+    },
+    "postStudyWork": {
+      "title": "Post Study Work / PR in Dubai",
+      "description": "Content to be added",
+      "benefits": []
+    },
+    "workRights": {
+      "termTime": "",
+      "holidays": ""
+    }
+  }
+}

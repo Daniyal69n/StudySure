@@ -12,7 +12,7 @@ const FacebookChat = () => {
 
   const openFacebook = () => {
     // Replace with your actual Facebook page URL
-    const facebookURL = "https://www.facebook.com/yourpage";
+    const facebookURL = "https://www.facebook.com/share/1EBDZyaMMv/";
     window.open(facebookURL, '_blank');
   };
 

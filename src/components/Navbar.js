@@ -52,7 +52,7 @@ const Navbar = () => {
             {/* Right Side - Social Icons */}
             <div className="flex items-center space-x-4">
               {/* Facebook */}
-              <a href="#" className="transition-transform duration-200 hover:scale-110">
+              <a href="https://www.facebook.com/share/1EBDZyaMMv/" target="_blank" className="transition-transform duration-200 hover:scale-110">
                 <Image
                   src="/social-icons/facebook.svg"
                   alt="Facebook"

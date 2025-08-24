@@ -24,9 +24,10 @@ export async function GET() {
         whyStudyReasons: country.whyStudyReasons || [],
         topUniversities: country.topUniversities || [],
         visaProcess: country.visaProcess || [],
-        costData: country.costData || { tuitionFees: [] },
+        costData: country.costData || { tuitionFees: [], intro: '', notes: [] },
         postStudyWork: country.postStudyWork || { title: '', description: '', benefits: [] },
-        workRights: country.workRights || { termTime: '', holidays: '' }
+        workRights: country.workRights || { termTime: '', holidays: '' },
+        sectionTitles: country.sectionTitles || {}
       };
       countryDataMap[country.slug] = cleanCountry;
     });
@@ -61,7 +62,9 @@ export async function PUT(request) {
       topUniversities: Array.isArray(data.topUniversities) ? data.topUniversities : [],
       visaProcess: Array.isArray(data.visaProcess) ? data.visaProcess : [],
       costData: {
-        tuitionFees: Array.isArray(data.costData?.tuitionFees) ? data.costData.tuitionFees : []
+        tuitionFees: Array.isArray(data.costData?.tuitionFees) ? data.costData.tuitionFees : [],
+        intro: data.costData?.intro || '',
+        notes: Array.isArray(data.costData?.notes) ? data.costData.notes : []
       },
       postStudyWork: {
         title: data.postStudyWork?.title || '',
@@ -71,6 +74,14 @@ export async function PUT(request) {
       workRights: {
         termTime: data.workRights?.termTime || '',
         holidays: data.workRights?.holidays || ''
+      },
+      sectionTitles: {
+        whyStudy: data.sectionTitles?.whyStudy || '',
+        universities: data.sectionTitles?.universities || '',
+        visaProcess: data.sectionTitles?.visaProcess || '',
+        costs: data.sectionTitles?.costs || '',
+        postStudyWork: data.sectionTitles?.postStudyWork || '',
+        workRights: data.sectionTitles?.workRights || ''
       }
     };
     
@@ -95,7 +106,8 @@ export async function PUT(request) {
       visaProcess: updatedCountry.visaProcess,
       costData: updatedCountry.costData,
       postStudyWork: updatedCountry.postStudyWork,
-      workRights: updatedCountry.workRights
+      workRights: updatedCountry.workRights,
+      sectionTitles: updatedCountry.sectionTitles
     };
     
     return NextResponse.json({ 

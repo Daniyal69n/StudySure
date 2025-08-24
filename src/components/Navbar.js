@@ -267,6 +267,9 @@ const Navbar = () => {
                               <Link href="/destinations/denmark" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#034833] hover:text-white transition-colors duration-200">
                                 Denmark
                               </Link>
+                              <Link href="/destinations/sweden" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#034833] hover:text-white transition-colors duration-200">
+                                Sweden
+                              </Link>
                               <Link href="/destinations/cyprus" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#034833] hover:text-white transition-colors duration-200">
                                 Cyprus
                               </Link>
@@ -408,6 +411,9 @@ const Navbar = () => {
                               </a>
                               <a href="https://www.mastersportal.com/search/universities/master/rankings/denmark" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#034833] hover:text-white transition-colors duration-200">
                                 Denmark
+                              </a>
+                              <a href="https://www.topuniversities.com/where-to-study/europe/sweden" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#034833] hover:text-white transition-colors duration-200">
+                                Sweden
                               </a>
                               <a href="https://edurank.org/geo/cy/" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#034833] hover:text-white transition-colors duration-200">
                                 Cyprus
@@ -585,6 +591,7 @@ const Navbar = () => {
                       <Link href="/destinations/georgia" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Georgia</Link>
                       <Link href="/destinations/hungary" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Hungary</Link>
                       <Link href="/destinations/denmark" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Denmark</Link>
+                      <Link href="/destinations/sweden" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Sweden</Link>
                       <Link href="/destinations/cyprus" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Cyprus</Link>
                       {/* Other Countries */}
                       <Link href="/destinations/united-states" onClick={() => setIsMobileMenuOpen(false)} className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">USA</Link>
@@ -625,6 +632,7 @@ const Navbar = () => {
                       <a href="https://www.usnews.com/best-colleges/ga?_sort=rank&_sortDirection=asc" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Georgia</a>
                       <a href="https://www.topuniversities.com/where-to-study/europe/hungary/guide" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Hungary</a>
                       <a href="https://www.mastersportal.com/search/universities/master/rankings/denmark" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Denmark</a>
+                      <a href="https://www.topuniversities.com/where-to-study/europe/sweden" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Sweden</a>
                       <a href="https://edurank.org/geo/cy/" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">Cyprus</a>
                       {/* Other Countries */}
                       <a href="https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities" target="_blank" rel="noopener noreferrer" className="block text-sm text-gray-600 hover:text-[#034833] py-2 px-3 rounded-md hover:bg-gray-50">USA</a>

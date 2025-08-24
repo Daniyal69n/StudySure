@@ -6,6 +6,37 @@ const PostStudyWorkEditor = ({ data, onChange }) => {
     onChange({ ...data, [field]: value });
   };
 
+  const extractSize = (text) => {
+    if (typeof text !== 'string') return null;
+    const m = text.match(/^\[size=(\d+)\]([\s\S]*)\[\/size\]$/);
+    return m ? parseInt(m[1], 10) : null;
+  };
+  const stripSize = (text) => {
+    if (typeof text !== 'string') return text;
+    const m = text.match(/^\[size=\d+\]([\s\S]*)\[\/size\]$/);
+    return m ? m[1] : text;
+  };
+  const applySize = (text, sizePx) => {
+    const inner = stripSize(text ?? '');
+    return sizePx ? `[size=${sizePx}]${inner}[/size]` : inner;
+  };
+
+  const applyBoldAtSelection = (elementId, currentValue, updateFn) => {
+    const el = document.getElementById(elementId);
+    if (!el) return;
+    const start = el.selectionStart ?? 0;
+    const end = el.selectionEnd ?? 0;
+    const before = currentValue.slice(0, start);
+    const selection = currentValue.slice(start, end) || 'bold';
+    const after = currentValue.slice(end);
+    updateFn(`${before}**${selection}**${after}`);
+    requestAnimationFrame(() => {
+      const pos = start + 2;
+      el.setSelectionRange(pos, pos + selection.length);
+      el.focus();
+    });
+  };
+
   const addBenefit = () => {
     const newBenefits = [...(data.benefits || []), ""];
     onChange({ ...data, benefits: newBenefits });
@@ -45,13 +76,45 @@ const PostStudyWorkEditor = ({ data, onChange }) => {
         <label className="block text-sm font-medium text-gray-700 mb-2">
           Main Description
         </label>
+        <div className="flex items-center gap-2 mb-2">
+          <label className="text-xs text-gray-500">Font size</label>
+          <select
+            value={extractSize(data.description) ?? ''}
+            onChange={(e) => updateField('description', applySize(data.description, e.target.value ? parseInt(e.target.value, 10) : null))}
+            className="border rounded px-2 py-1 text-xs"
+          >
+            <option value="">Default</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="22">22</option>
+            <option value="24">24</option>
+          </select>
+        </div>
         <textarea
-          value={data.description || ""}
-          onChange={(e) => updateField('description', e.target.value)}
+          id="psw-desc"
+          value={stripSize(data.description || "")}
+          onChange={(e) => {
+            const size = extractSize(data.description);
+            updateField('description', applySize(e.target.value, size));
+          }}
           placeholder="Describe the post-study work opportunities..."
           className="w-full p-3 border rounded-lg resize-none focus:ring-2 focus:ring-[#034833] focus:border-transparent"
           rows={4}
         />
+        <button
+          type="button"
+          onClick={() => {
+            const base = stripSize(data.description || '');
+            applyBoldAtSelection('psw-desc', base, (inner) => {
+              updateField('description', applySize(inner, extractSize(data.description)));
+            });
+          }}
+          className="mt-1 px-2 py-1 text-xs border rounded hover:bg-gray-50"
+        >
+          Bold
+        </button>
         <div className="text-xs text-gray-500 mt-1">
           Use **text** for bold formatting
         </div>
@@ -79,13 +142,45 @@ const PostStudyWorkEditor = ({ data, onChange }) => {
                   {index + 1}
                 </div>
                 
+                <div className="flex items-center gap-2 mb-1">
+                  <label className="text-xs text-gray-500">Font size</label>
+                  <select
+                    value={extractSize(benefit) ?? ''}
+                    onChange={(e) => updateBenefit(index, applySize(benefit, e.target.value ? parseInt(e.target.value, 10) : null))}
+                    className="border rounded px-2 py-1 text-xs"
+                  >
+                    <option value="">Default</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                  </select>
+                </div>
                 <textarea
-                  value={benefit}
-                  onChange={(e) => updateBenefit(index, e.target.value)}
+                  id={`psw-benefit-${index}`}
+                  value={stripSize(benefit)}
+                  onChange={(e) => {
+                    const size = extractSize(benefit);
+                    updateBenefit(index, applySize(e.target.value, size));
+                  }}
                   placeholder="Enter benefit description..."
                   className="flex-1 p-2 border rounded resize-none focus:ring-2 focus:ring-[#034833] focus:border-transparent"
                   rows={2}
                 />
+                <button
+                  type="button"
+                  onClick={() => {
+                    const base = stripSize(benefit || '');
+                    applyBoldAtSelection(`psw-benefit-${index}`, base, (inner) => {
+                      updateBenefit(index, applySize(inner, extractSize(benefit)));
+                    });
+                  }}
+                  className="mt-1 px-2 py-1 text-xs border rounded hover:bg-gray-50"
+                >
+                  Bold
+                </button>
 
                 <button
                   onClick={() => removeBenefit(index)}

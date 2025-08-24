@@ -59,6 +59,17 @@ const sampleCountries = [
     costData: { tuitionFees: [] },
     postStudyWork: { title: '', description: '', benefits: [] },
     workRights: { termTime: '', holidays: '' }
+  },
+  {
+    slug: 'sweden',
+    countryName: 'Sweden',
+    bannerImage: 'sweden',
+    whyStudyReasons: ['Free education for EU students', 'High quality of life', 'Innovation and technology focus'],
+    topUniversities: [],
+    visaProcess: [],
+    costData: { tuitionFees: [] },
+    postStudyWork: { title: '', description: '', benefits: [] },
+    workRights: { termTime: '', holidays: '' }
   }
 ];
 

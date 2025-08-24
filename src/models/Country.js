@@ -16,7 +16,9 @@ const TuitionFeeSchema = new mongoose.Schema({
 }, { _id: false });
 
 const CostDataSchema = new mongoose.Schema({
-  tuitionFees: [TuitionFeeSchema]
+  tuitionFees: [TuitionFeeSchema],
+  intro: { type: String, default: '' },
+  notes: [{ type: String }]
 }, { _id: false });
 
 const PostStudyWorkSchema = new mongoose.Schema({
@@ -28,6 +30,16 @@ const PostStudyWorkSchema = new mongoose.Schema({
 const WorkRightsSchema = new mongoose.Schema({
   termTime: { type: String, default: '' },
   holidays: { type: String, default: '' }
+}, { _id: false });
+
+// Optional custom section titles editable by admins
+const SectionTitlesSchema = new mongoose.Schema({
+  whyStudy: { type: String, default: '' },
+  universities: { type: String, default: '' },
+  visaProcess: { type: String, default: '' },
+  costs: { type: String, default: '' },
+  postStudyWork: { type: String, default: '' },
+  workRights: { type: String, default: '' }
 }, { _id: false });
 
 const CountrySchema = new mongoose.Schema({
@@ -44,7 +56,8 @@ const CountrySchema = new mongoose.Schema({
   visaProcess: [VisaStepSchema],
   costData: CostDataSchema,
   postStudyWork: PostStudyWorkSchema,
-  workRights: WorkRightsSchema
+  workRights: WorkRightsSchema,
+  sectionTitles: SectionTitlesSchema
 }, {
   timestamps: true
 });

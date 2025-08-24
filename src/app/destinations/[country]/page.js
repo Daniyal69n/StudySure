@@ -31,7 +31,8 @@ const CountryPage = async ({ params }) => {
         visaProcess: countryDoc.visaProcess || [],
         costData: countryDoc.costData || { tuitionFees: [] },
         postStudyWork: countryDoc.postStudyWork || { title: '', description: '', benefits: [] },
-        workRights: countryDoc.workRights || { termTime: '', holidays: '' }
+        workRights: countryDoc.workRights || { termTime: '', holidays: '' },
+        sectionTitles: countryDoc.sectionTitles || {}
       };
     }
   } catch (error) {
@@ -66,11 +67,14 @@ const CountryPage = async ({ params }) => {
     'canada': 'canada',
     'australia': 'australia',
     'turkey': 'turkey',
-    'china': 'china'
+    'china': 'china',
+    'sweden': 'sweden'
   };
   
   const imageName = bannerImageMap[country] || country;
-  const bannerImage = `/destinations-banner/${imageName}.webp`;
+  // Use .jpeg for Sweden, .webp for others
+  const fileExtension = country === 'sweden' ? 'jpeg' : 'webp';
+  const bannerImage = `/destinations-banner/${imageName}.${fileExtension}`;
 
   return (
     <div>

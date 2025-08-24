@@ -23,7 +23,8 @@ const CountriesFilter = () => {
     'cyprus': '/flags/cyprus.png',
     'turkey': '/flags/turkey.png',
     'china': '/flags/china.webp',
-    'dubai': '/flags/uae.png'
+    'dubai': '/flags/uae.png',
+    'sweden': '/flags/sweden.jpg'
   };
 
   // Fetch countries from MongoDB API
@@ -41,11 +42,37 @@ const CountriesFilter = () => {
         if (result.success && result.data) {
           // Convert country data to the format needed for the UI
           const countryList = Object.values(result.data).map(country => ({
-            name: country.countryName || country.slug.replace('-', ' '),
+            name: country.slug === 'sweden' ? 'Sweden' : (country.countryName || country.slug.replace('-', ' ')),
             flag: flagMap[country.slug] || '/flags/default.png',
             slug: country.slug
           }));
-          setCountries(countryList);
+          
+          // Sort countries to ensure Sweden appears after Denmark
+          const sortedCountries = countryList.sort((a, b) => {
+            // Define the desired order
+            const order = [
+              'united-kingdom', 'united-states', 'canada', 'australia',
+              'germany', 'italy', 'belarus', 'france', 'georgia', 'hungary',
+              'denmark', 'sweden', 'cyprus', 'turkey', 'china', 'dubai'
+            ];
+            
+            const aIndex = order.indexOf(a.slug);
+            const bIndex = order.indexOf(b.slug);
+            
+            // If both are in the order array, sort by their position
+            if (aIndex !== -1 && bIndex !== -1) {
+              return aIndex - bIndex;
+            }
+            
+            // If only one is in the order array, prioritize it
+            if (aIndex !== -1) return -1;
+            if (bIndex !== -1) return 1;
+            
+            // If neither is in the order array, sort alphabetically
+            return a.name.localeCompare(b.name);
+          });
+          
+          setCountries(sortedCountries);
         }
       } catch (error) {
         console.error('Error fetching countries:', error);

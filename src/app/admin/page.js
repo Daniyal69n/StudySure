@@ -67,13 +67,14 @@ const AdminDashboard = () => {
     { slug: 'cyprus', name: 'Cyprus' },
     { slug: 'turkey', name: 'Turkey' },
     { slug: 'china', name: 'China' },
-    { slug: 'dubai', name: 'UAE' }
+    { slug: 'dubai', name: 'UAE' },
+    { slug: 'sweden', name: 'Sweden' }
   ];
 
   const sections = [
     { id: 'whyStudy', name: 'Why Study Reasons', icon: '📚' },
     { id: 'universities', name: 'Top Universities', icon: '🎓' },
-    { id: 'visaProcess', name: 'Visa Process', icon: '📋' },
+    { id: 'visaProcess', name: 'Student Visa Process', icon: '📋' },
     { id: 'costs', name: 'Study Costs', icon: '💰' },
     { id: 'postStudyWork', name: 'Post Study Work', icon: '💼' },
     { id: 'workRights', name: 'Work Rights', icon: '⏰' }
@@ -323,7 +324,7 @@ const AdminDashboard = () => {
                     }`}
                   >
                     <span className="mr-2">{section.icon}</span>
-                    {section.name}
+                    {countryData.sectionTitles?.[section.id] || section.name}
                   </button>
                 ))}
               </div>
@@ -338,12 +339,30 @@ const AdminDashboard = () => {
                   Editing: {countries.find(c => c.slug === selectedCountry)?.name}
                 </h2>
                 <div className="text-sm text-gray-500">
-                  Section: {sections.find(s => s.id === activeSection)?.name}
+                  Section: {countryData.sectionTitles?.[activeSection] || sections.find(s => s.id === activeSection)?.name}
                 </div>
               </div>
 
               {/* Content Editor will be rendered here */}
               <div className="min-h-96">
+                {/* Editable Section Title */}
+                <div className="mb-6">
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Section Title</label>
+                  <input
+                    type="text"
+                    value={countryData.sectionTitles?.[activeSection] || ''}
+                    onChange={(e) => setCountryData(prev => ({
+                      ...prev,
+                      sectionTitles: {
+                        ...prev.sectionTitles,
+                        [activeSection]: e.target.value
+                      }
+                    }))}
+                    placeholder={`Default: ${sections.find(s => s.id === activeSection)?.name}`}
+                    className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#034833] focus:border-transparent"
+                  />
+                </div>
+
                 <ContentEditor
                   section={activeSection}
                   countryData={countryData}

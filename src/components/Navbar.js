@@ -103,7 +103,7 @@ const Navbar = () => {
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(100%)' }}
                 />
-                <span className="text-sm text-white font-medium">+1 234 567 8900</span>
+                <span className="text-sm text-white font-medium">+923268337390</span>
               </div>
               
               {/* Email */}

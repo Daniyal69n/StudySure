@@ -59,7 +59,7 @@ const Hero = () => {
                     letterSpacing: 'normal'
                   }}
                 >
-                  STUDYSURE CONSULTANTS (PRIVATE) Limited
+                  STUDYSURE CONSULTANTS (PRIVATE) LIMITED
                 </h1>
                 <div className="space-y-2 text-white" style={{ fontSize: 'clamp(12px, 3vw, 16px)' }}>
                   <p className="flex items-center justify-center lg:justify-start flex-wrap">

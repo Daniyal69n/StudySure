@@ -181,7 +181,7 @@ const Footer = () => {
               </ul>
               <div className="border-l border-white/20 pl-6">
                 <p className="text-white/60 text-sm">
-                  Powered by <span className="text-white font-semibold">SilkMotion</span>
+                  Powered by <span className="text-white font-semibold">MotionStudios</span>
                 </p>
               </div>
             </div>

@@ -69,7 +69,7 @@ const Hero = () => {
                     <span>🌐 http://studysure.org</span>
                   </p>
                   <p className="flex items-center justify-center lg:justify-start flex-wrap">
-                    <span>📞 03006552....</span>
+                    <span>📞 03268337390</span>
                   </p>
                   <p className="flex items-center justify-center lg:justify-start text-center lg:text-left flex-wrap">
                     <span>📍 Plaza No-11, DHA-II, G.T. Road, near Giga Mall, Rawalpindi</span>

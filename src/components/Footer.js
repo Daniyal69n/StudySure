@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="mb-6 flex justify-center lg:justify-start">
               <div className="w-44 h-44 rounded-full overflow-hidden bg-white flex items-center justify-center">
                 <Image
-                  src="/logo2.png"
+                  src="/logo.jpeg"
                   alt="StudySure Logo"
                   width={180}
                   height={180}

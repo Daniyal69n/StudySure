@@ -31,7 +31,7 @@ const Hero = () => {
               <div className="mb-4 flex justify-center lg:justify-start">
                 <div className="flex justify-center mb-6">
                   <Image
-                    src="/logo2.png"
+                    src="/logo.jpeg"
                     alt="StudySure Logo"
                     width={180}
                     height={180}

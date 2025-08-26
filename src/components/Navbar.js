@@ -32,7 +32,7 @@ const Navbar = () => {
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(100%)' }}
                 />
-                <span className="text-base text-white font-medium">+1 234 567 8900</span>
+                <span className="text-base text-white font-medium">+92 326 833 7390</span>
               </div>
               
               {/* Email */}
@@ -174,7 +174,7 @@ const Navbar = () => {
               <div className="flex-shrink-0">
                 <Link href="/">
                   <Image
-                    src="/logo.png"
+                    src="/logo.jpeg"
                     alt="StudySure Logo"
                     width={300}
                     height={100}
